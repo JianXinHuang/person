@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6之async/await | 起风的琐碎博客记录</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="全栈成长之路，分享前后端以及 DevOps 相关文章，使各端开发者能够突破瓶颈进一步成长。">
+    
+    <link rel="preload" href="/person/assets/css/0.styles.233a58f2.css" as="style"><link rel="preload" href="/person/assets/js/app.69942934.js" as="script"><link rel="preload" href="/person/assets/js/2.996b1df4.js" as="script"><link rel="preload" href="/person/assets/js/13.d6643dd1.js" as="script"><link rel="prefetch" href="/person/assets/js/10.4fb9e760.js"><link rel="prefetch" href="/person/assets/js/11.e6c8d2c8.js"><link rel="prefetch" href="/person/assets/js/12.ba399906.js"><link rel="prefetch" href="/person/assets/js/14.ed85b830.js"><link rel="prefetch" href="/person/assets/js/15.d4a61c2c.js"><link rel="prefetch" href="/person/assets/js/16.c376c64b.js"><link rel="prefetch" href="/person/assets/js/3.2c80fa4d.js"><link rel="prefetch" href="/person/assets/js/4.a50e9950.js"><link rel="prefetch" href="/person/assets/js/5.09663c1f.js"><link rel="prefetch" href="/person/assets/js/6.73e51c6f.js"><link rel="prefetch" href="/person/assets/js/7.fbc45fdd.js"><link rel="prefetch" href="/person/assets/js/8.a0999577.js"><link rel="prefetch" href="/person/assets/js/9.ba5ea98f.js">
+    <link rel="stylesheet" href="/person/assets/css/0.styles.233a58f2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/person/" class="home-link router-link-active"><!----> <span class="site-name">起风的琐碎博客记录</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/person/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/person/Css/css-flex.html" class="nav-link">
+  随记博客
+</a></div><div class="nav-item"><a href="/person/Xmind/map.html" class="nav-link">
+  思维导图
+</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/person/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/person/Css/css-flex.html" class="nav-link">
+  随记博客
+</a></div><div class="nav-item"><a href="/person/Xmind/map.html" class="nav-link">
+  思维导图
+</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Css/css-flex.html" class="sidebar-link">Flex布局</a></li><li><a href="/person/Css/scss.html" class="sidebar-link">SCSS简易教程</a></li><li><a href="/person/Css/css-layout.html" class="sidebar-link">CSS常见布局方案</a></li><li><a href="/person/Css/css-classname.html" class="sidebar-link">CSS命名规范</a></li><li><a href="/person/Css/css-base.html" class="sidebar-link">CSS基础知识</a></li><li><a href="/person/Css/css-bfc.html" class="sidebar-link">CSS-BFC</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Javascript/js-es6-async.html" aria-current="page" class="active sidebar-link">ES6之async/await</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/person/Javascript/js-es6-async.html#es6之async-await" class="sidebar-link">ES6之async/await</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Npm</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Npm/npm-verdaccio.html" class="sidebar-link">window上搭建npm私仓</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="es6之async-await"><a href="#es6之async-await" class="header-anchor">#</a> ES6之async/await</h2> <p>如果要使一个函数变成async/await的形式，必须要做两步:</p> <blockquote><p>1、直接在普通函数前面加上async，表示这是一个异步函数
+(任何普通函数可以调用async函数, 结果.then)</p> <p>2、在函数内部 的异步执行的语句前面加上await
+(后面可以跟promise或者任意类型的值)</p></blockquote> <h5 id="_1、async的多种声明形式"><a href="#_1、async的多种声明形式" class="header-anchor">#</a> 1、async的多种声明形式</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//函数式声明</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//对象式声明</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+   <span class="token keyword">async</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//箭头函数声明</span>
+<span class="token keyword">let</span> <span class="token function-variable function">test</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+</code></pre></div><h5 id="_2、await语句的多种调用形式"><a href="#_2、await语句的多种调用形式" class="header-anchor">#</a> 2、await语句的多种调用形式</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//普通语句，首先await a;的表达式的值为a的值，然后再转成一个resolve的promise对象</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> <span class="token number">123</span><span class="token punctuation">;</span>   <span class="token comment">//值为123</span>
+    <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span>  <span class="token comment">//a的值为“hello”</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//promise语句。(1)如果是resolve的。则直接返回resolve中的数据</span>
+<span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;world&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//p为resolve的promise对象，值为“world”</span>
+  <span class="token keyword">return</span> p<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//promise语句。(2)如果是reject的。则直接返回reject中的数据</span>
+<span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;错误了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">async</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//p为reject的promise对象，值为“错误了”,后面的语句不会再执行</span>
+  <span class="token comment">//to do </span>
+  <span class="token keyword">return</span> p<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+此时要么在<span class="token keyword">async</span>部分捕获错误，并进行处理。要么在调用<span class="token keyword">async</span>语句的地方捕获错误并处理
+</code></pre></div><h5 id="_3、await语错误处理"><a href="#_3、await语错误处理" class="header-anchor">#</a> 3、await语错误处理</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//单条语句的处理</span>
+<span class="token keyword">async</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    str <span class="token operator">=</span> <span class="token string">&quot;world&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//多条语句的处理</span>
+<span class="token keyword">async</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> <span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    str <span class="token operator">=</span> <span class="token string">&quot;world1&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h5 id="_4、await的并行处理"><a href="#_4、await的并行处理" class="header-anchor">#</a> 4、await的并行处理</h5> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//因为多个await都是依次往后台发送。如果这几个请求之前没有先后关联顺序，则完全没必要。可以做成并行发送</span>
+<span class="token keyword">async</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getPromise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/docs/Javascript/js-es6-async.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/person/Css/css-bfc.html" class="prev">
+        CSS-BFC
+      </a></span> <span class="next"><a href="/person/Npm/npm-verdaccio.html">
+        window上搭建npm私仓
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/person/assets/js/app.69942934.js" defer></script><script src="/person/assets/js/2.996b1df4.js" defer></script><script src="/person/assets/js/13.d6643dd1.js" defer></script>
+  </body>
+</html>

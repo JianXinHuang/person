@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1、flex布局是什么？ | 起风的琐碎博客记录</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="全栈成长之路，分享前后端以及 DevOps 相关文章，使各端开发者能够突破瓶颈进一步成长。">
+    
+    <link rel="preload" href="/person/assets/css/0.styles.233a58f2.css" as="style"><link rel="preload" href="/person/assets/js/app.69942934.js" as="script"><link rel="preload" href="/person/assets/js/2.996b1df4.js" as="script"><link rel="preload" href="/person/assets/js/10.4fb9e760.js" as="script"><link rel="prefetch" href="/person/assets/js/11.e6c8d2c8.js"><link rel="prefetch" href="/person/assets/js/12.ba399906.js"><link rel="prefetch" href="/person/assets/js/13.d6643dd1.js"><link rel="prefetch" href="/person/assets/js/14.ed85b830.js"><link rel="prefetch" href="/person/assets/js/15.d4a61c2c.js"><link rel="prefetch" href="/person/assets/js/16.c376c64b.js"><link rel="prefetch" href="/person/assets/js/3.2c80fa4d.js"><link rel="prefetch" href="/person/assets/js/4.a50e9950.js"><link rel="prefetch" href="/person/assets/js/5.09663c1f.js"><link rel="prefetch" href="/person/assets/js/6.73e51c6f.js"><link rel="prefetch" href="/person/assets/js/7.fbc45fdd.js"><link rel="prefetch" href="/person/assets/js/8.a0999577.js"><link rel="prefetch" href="/person/assets/js/9.ba5ea98f.js">
+    <link rel="stylesheet" href="/person/assets/css/0.styles.233a58f2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/person/" class="home-link router-link-active"><!----> <span class="site-name">起风的琐碎博客记录</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/person/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/person/Css/css-flex.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  随记博客
+</a></div><div class="nav-item"><a href="/person/Xmind/map.html" class="nav-link">
+  思维导图
+</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/person/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/person/Css/css-flex.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  随记博客
+</a></div><div class="nav-item"><a href="/person/Xmind/map.html" class="nav-link">
+  思维导图
+</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Css/css-flex.html" aria-current="page" class="active sidebar-link">Flex布局</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/person/Css/css-flex.html#_1、flex布局是什么" class="sidebar-link">1、flex布局是什么？</a></li><li class="sidebar-sub-header"><a href="/person/Css/css-flex.html#_2、flex容器的属性" class="sidebar-link">2、flex容器的属性</a></li><li class="sidebar-sub-header"><a href="/person/Css/css-flex.html#_3、flex容器内部的项目的属性" class="sidebar-link">3、flex容器内部的项目的属性</a></li><li class="sidebar-sub-header"><a href="/person/Css/css-flex.html#_4、子元素设置宽度和父元素的关系" class="sidebar-link">4、子元素设置宽度和父元素的关系</a></li></ul></li><li><a href="/person/Css/scss.html" class="sidebar-link">SCSS简易教程</a></li><li><a href="/person/Css/css-layout.html" class="sidebar-link">CSS常见布局方案</a></li><li><a href="/person/Css/css-classname.html" class="sidebar-link">CSS命名规范</a></li><li><a href="/person/Css/css-base.html" class="sidebar-link">CSS基础知识</a></li><li><a href="/person/Css/css-bfc.html" class="sidebar-link">CSS-BFC</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Javascript/js-es6-async.html" class="sidebar-link">ES6之async/await</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Npm</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Npm/npm-verdaccio.html" class="sidebar-link">window上搭建npm私仓</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1、flex布局是什么"><a href="#_1、flex布局是什么" class="header-anchor">#</a> 1、flex布局是什么？</h2> <p>任何一个容器都可以指定为Flex布局。</p> <p>适用场景: <strong>只要与居中相关的，水平居中，垂直居中，或者水平垂直居中，都可以使用flex布局</strong></p> <div class="language- extra-class"><pre class="language-text"><code>.box{
+  display: flex;
+}
+//或者行内级别(其他行内元素可以直接跟在行末尾)
+.box{
+  display: inline-flex;
+}
+</code></pre></div><p>此时子元素无法再使用==float==、==clear==和==vertical-align==属性,
+<strong>但其中的子元素同样可以设置长和宽等属性</strong></p> <p>==注意==:<strong>默认情况下子项目在“纵轴”方向的高度是自动伸展铺满的，除非给子项目指定具体的height值。 可通过align-items改变默认值</strong></p> <p>设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。
+而且即使span元素，也在flex布局下，可以设置height，margin-top等属性</p> <h2 id="_2、flex容器的属性"><a href="#_2、flex容器的属性" class="header-anchor">#</a> 2、flex容器的属性</h2> <ul><li>flex-direction    【决定主轴的方向（即项目的排列方向）】</li> <li>flex-wrap  【决定在主轴上排不下，如何换行】</li> <li>justify-content  【项目在主轴上的对齐方式】</li> <li>align-items  【项目在纵轴上的对齐方式】</li> <li>align-content  【多根主轴时项目在纵轴的对齐方式，如果项目只有一根主轴线，该属性不起作用】</li></ul> <p>其中前4种最常用。</p> <h4 id="_2-1、flex-direction属性"><a href="#_2-1、flex-direction属性" class="header-anchor">#</a> 2.1、flex-direction属性</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row | row-reverse | column | column-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+row（默认值）：主轴为水平方向，起点在左端。
+row-reverse：主轴为水平方向，起点在右端。
+column：主轴为垂直方向，起点在上沿。
+column-reverse：主轴为垂直方向，起点在下沿。
+*/</span>
+</code></pre></div><ul><li>如果子元素不定高，则值为row|row-reverse时，默认高度自动铺满容器。（    align-items: stretch;）</li></ul> <p><img src="/person/images/flex/flex-direction-row.png" alt="image"></p> <ul><li>如果子元素不定宽，则值为column|column-reverse时，默认宽度自动铺满容器。（    align-items: stretch;）</li></ul> <p><img src="/person/images/flex/flex-direction-column.png" alt="image"></p> <ul><li>如果子元素定宽和高，则宽/高度使用自己定义的。</li></ul> <p><img src="/person/images/flex/flex-direction-column-width.png" alt="image"></p> <h4 id="_2-2、flex-wrap属性"><a href="#_2-2、flex-wrap属性" class="header-anchor">#</a> 2.2、flex-wrap属性</h4> <p>默认情况下，项目都排在一条主轴线上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span><span class="token punctuation">{</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap | wrap | wrap-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+nowrap（默认值）：如果排列不下时，会按照子项目的实际宽度比例，等比缩小，然后排下
+*/</span>
+</code></pre></div><ul><li>值为wrap</li></ul> <p><img src="/person/images/flex/flex-wrap-no.png" alt="image"></p> <ul><li>值为nowrap</li></ul> <p><img src="/person/images/flex/flex-wrap.png" alt="image"></p> <h4 id="_2-3、justify-content属性"><a href="#_2-3、justify-content属性" class="header-anchor">#</a> 2.3、justify-content属性</h4> <p>定义了项目在主轴上的对齐方式。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between | space-around<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+space-between：两端对齐，项目之间的间隔都相等【即开始和尾部贴边】。
+space-around：每个项目两侧的间隔相等【不贴边】。
+*/</span>
+</code></pre></div><h4 id="_2-4、align-items属性"><a href="#_2-4、align-items属性" class="header-anchor">#</a> 2.4、align-items属性</h4> <p>定义项目在纵轴上如何对齐</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+flex-start：交叉轴的起点对齐【不会占满整个宽度，而是采用实际宽度】。
+flex-end：交叉轴的终点对齐【不会占满整个宽度，而是采用实际宽度】。
+center：交叉轴的中点对齐【不会占满整个宽度，而是采用实际宽度】。
+baseline: 项目的第一行文字的基线对齐【不会占满整个宽度，而是采用实际宽度】。
+*/</span>
+</code></pre></div><h2 id="_3、flex容器内部的项目的属性"><a href="#_3、flex容器内部的项目的属性" class="header-anchor">#</a> 3、flex容器内部的项目的属性</h2> <ul><li>flex  该项目在“主轴”上如何填充空白区域</li> <li>align-self  允许单个项目有与其他项目不一样的“纵轴”对齐方式，可覆盖align-items属性</li></ul> <h4 id="_3-1、flex属性"><a href="#_3-1、flex属性" class="header-anchor">#</a> 3.1、flex属性</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> none | auto
+  
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+auto: 表示将此项目伸展并占满空白区域
+none：不填充空白区域
+*/</span>
+</code></pre></div><p><img src="/person/images/flex/flex-item-auto.png" alt="image"></p> <h4 id="_3-2、align-self属性"><a href="#_3-2、align-self属性" class="header-anchor">#</a> 3.2、align-self属性</h4> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> auto | flex-start | flex-end | center | baseline | stretch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+auto：（默认）继承父元素的align-items属性，如果父元素没定义，则使用父元素默认的，即stretch
+*/</span>
+</code></pre></div><p><img src="/person/images/flex/flex-align-self.png" alt="image"></p> <h2 id="_4、子元素设置宽度和父元素的关系"><a href="#_4、子元素设置宽度和父元素的关系" class="header-anchor">#</a> 4、子元素设置宽度和父元素的关系</h2> <h4 id="_4-1、子元素宽、高均不设置"><a href="#_4-1、子元素宽、高均不设置" class="header-anchor">#</a> 4.1、子元素宽、高均不设置</h4> <p>如果，子元素在主轴和纵轴方向，不指定宽度，则在 纵轴方向 默认 100% 延伸， 主轴方向宽度为0</p> <h4 id="_4-2、子元素在主轴方向上设置了宽度"><a href="#_4-2、子元素在主轴方向上设置了宽度" class="header-anchor">#</a> 4.2、子元素在主轴方向上设置了宽度</h4> <p>a、这个宽度如果不超过 主轴，子元素 则显示为自身设置的宽度。
+b、如果这个宽度超过主轴，则 子元素的宽度 最大为 主轴的宽度，</p> <p>即子元素的宽宽不会超过主轴的宽度</p> <h4 id="_4-3、子元素在纵轴方向上设置了高度"><a href="#_4-3、子元素在纵轴方向上设置了高度" class="header-anchor">#</a> 4.3、子元素在纵轴方向上设置了高度</h4> <p>a、这个高度如果不超过 纵轴，子元素 则显示为自身设置的高度。
+b、如果这个高度超过 纵轴，则 子元素的高度为自身设置的高度。</p> <p>即子元素的高度依靠自身设置的值</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/docs/Css/css-flex.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/person/Css/scss.html">
+        SCSS简易教程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/person/assets/js/app.69942934.js" defer></script><script src="/person/assets/js/2.996b1df4.js" defer></script><script src="/person/assets/js/10.4fb9e760.js" defer></script>
+  </body>
+</html>

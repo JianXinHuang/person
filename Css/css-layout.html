@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、居中布局 | 起风的琐碎博客记录</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="全栈成长之路，分享前后端以及 DevOps 相关文章，使各端开发者能够突破瓶颈进一步成长。">
+    
+    <link rel="preload" href="/person/assets/css/0.styles.233a58f2.css" as="style"><link rel="preload" href="/person/assets/js/app.69942934.js" as="script"><link rel="preload" href="/person/assets/js/2.996b1df4.js" as="script"><link rel="preload" href="/person/assets/js/11.e6c8d2c8.js" as="script"><link rel="prefetch" href="/person/assets/js/10.4fb9e760.js"><link rel="prefetch" href="/person/assets/js/12.ba399906.js"><link rel="prefetch" href="/person/assets/js/13.d6643dd1.js"><link rel="prefetch" href="/person/assets/js/14.ed85b830.js"><link rel="prefetch" href="/person/assets/js/15.d4a61c2c.js"><link rel="prefetch" href="/person/assets/js/16.c376c64b.js"><link rel="prefetch" href="/person/assets/js/3.2c80fa4d.js"><link rel="prefetch" href="/person/assets/js/4.a50e9950.js"><link rel="prefetch" href="/person/assets/js/5.09663c1f.js"><link rel="prefetch" href="/person/assets/js/6.73e51c6f.js"><link rel="prefetch" href="/person/assets/js/7.fbc45fdd.js"><link rel="prefetch" href="/person/assets/js/8.a0999577.js"><link rel="prefetch" href="/person/assets/js/9.ba5ea98f.js">
+    <link rel="stylesheet" href="/person/assets/css/0.styles.233a58f2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/person/" class="home-link router-link-active"><!----> <span class="site-name">起风的琐碎博客记录</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/person/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/person/Css/css-flex.html" class="nav-link">
+  随记博客
+</a></div><div class="nav-item"><a href="/person/Xmind/map.html" class="nav-link">
+  思维导图
+</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/person/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/person/Css/css-flex.html" class="nav-link">
+  随记博客
+</a></div><div class="nav-item"><a href="/person/Xmind/map.html" class="nav-link">
+  思维导图
+</a></div> <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Css</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Css/css-flex.html" class="sidebar-link">Flex布局</a></li><li><a href="/person/Css/scss.html" class="sidebar-link">SCSS简易教程</a></li><li><a href="/person/Css/css-layout.html" aria-current="page" class="active sidebar-link">CSS常见布局方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/person/Css/css-layout.html#一、居中布局" class="sidebar-link">一、居中布局</a></li><li class="sidebar-sub-header"><a href="/person/Css/css-layout.html#二、多列布局" class="sidebar-link">二、多列布局</a></li><li class="sidebar-sub-header"><a href="/person/Css/css-layout.html#三、等分布局" class="sidebar-link">三、等分布局</a></li></ul></li><li><a href="/person/Css/css-classname.html" class="sidebar-link">CSS命名规范</a></li><li><a href="/person/Css/css-base.html" class="sidebar-link">CSS基础知识</a></li><li><a href="/person/Css/css-bfc.html" class="sidebar-link">CSS-BFC</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Javascript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Javascript/js-es6-async.html" class="sidebar-link">ES6之async/await</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Npm</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/person/Npm/npm-verdaccio.html" class="sidebar-link">window上搭建npm私仓</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="一、居中布局"><a href="#一、居中布局" class="header-anchor">#</a> 一、居中布局</h2> <h4 id="_1、水平居中"><a href="#_1、水平居中" class="header-anchor">#</a> 1、水平居中</h4> <h6 id="a、inline-block-text-align"><a href="#a、inline-block-text-align" class="header-anchor">#</a> a、inline-block + text-align</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>Tips：兼容至IE8.</p> <p><img src="/person/images/css-layout/horizontal-center.png" alt="image"></p> <h6 id="b、table-margin"><a href="#b、table-margin" class="header-anchor">#</a> b、table + margin</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.child</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div&gt;
+	&lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>Tips：兼容至IE8.</p> <p><img src="/person/images/css-layout/horizontal-center.png" alt="image"></p> <h6 id="c、absolute-transform"><a href="#c、absolute-transform" class="header-anchor">#</a> c、absolute + transform</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+	<span class="token property">width</span><span class="token punctuation">:</span>200px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">left</span><span class="token punctuation">:</span>50%<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+    &lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>Tips：可兼容至IE9，因为transform限制。</p> <p><img src="/person/images/css-layout/horizontal-center.png" alt="image"></p> <h6 id="d、flex-justify-content"><a href="#d、flex-justify-content" class="header-anchor">#</a> d、flex  +  justify-content</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>Tips：可兼容至IE10，但flex提供的布局很强大。</p> <p><img src="/person/images/css-layout/horizontal-center.png" alt="image"></p> <h4 id="_2、垂直居中"><a href="#_2、垂直居中" class="header-anchor">#</a> 2、垂直居中</h4> <h6 id="a、tablet-cell-vertical-align"><a href="#a、tablet-cell-vertical-align" class="header-anchor">#</a> a、tablet-cell + vertical-align</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.child</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> table-cell<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div&gt;
+	&lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/vertical-middle.png" alt="image"></p> <h6 id="b、absolute-transform"><a href="#b、absolute-transform" class="header-anchor">#</a> b、absolute + transform</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+	
+	<span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+    &lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/vertical-middle.png" alt="image"></p> <h6 id="c、flex-align-items"><a href="#c、flex-align-items" class="header-anchor">#</a> c、flex + align-items</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+
+	<span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/vertical-middle.png" alt="image"></p> <h4 id="_3、水平垂直居中"><a href="#_3、水平垂直居中" class="header-anchor">#</a> 3、水平垂直居中</h4> <h6 id="a、table-cell-vertical-align-text-align"><a href="#a、table-cell-vertical-align-text-align" class="header-anchor">#</a> a、table-cell  + vertical-align + text-align</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+	
+	<span class="token property">display</span><span class="token punctuation">:</span> table-cell<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><h6 id="b、absolute-transform-2"><a href="#b、absolute-transform-2" class="header-anchor">#</a> b、absolute + transform</h6> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+
+	<span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span><span class="token punctuation">{</span>
+	<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+	<span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+	<span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+	<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%<span class="token punctuation">,</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/center.png" alt="image"></p> <h6 id="c、flex"><a href="#c、flex" class="header-anchor">#</a> c、flex</h6> <p>方案1</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+	<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+	<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+
+	<span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+	<span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p>方案2</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.parent</span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.child</span> <span class="token punctuation">{</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;child&quot;</span>&gt;Demo&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/center.png" alt="image"></p> <h2 id="二、多列布局"><a href="#二、多列布局" class="header-anchor">#</a> 二、多列布局</h2> <p>一列定宽，一列自适应</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.container</span><span class="token punctuation">{</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.left</span><span class="token punctuation">{</span>
+	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+	<span class="token property">margin-right</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.right</span><span class="token punctuation">{</span>
+	<span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;container&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;left&quot;</span>&gt;left&lt;/div&gt;
+	&lt;div class=<span class="token string">&quot;right&quot;</span>&gt;
+		&lt;div&gt;right1&lt;/div&gt;
+		&lt;div&gt;right2&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/muti-column.png" alt="image"></p> <h2 id="三、等分布局"><a href="#三、等分布局" class="header-anchor">#</a> 三、等分布局</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//css
+.parent</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.column</span> <span class="token punctuation">{</span>
+	<span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//html
+&lt;div class=<span class="token string">&quot;parent&quot;</span>&gt;
+	&lt;div class=<span class="token string">&quot;column&quot;</span>&gt;column 1&lt;/div&gt;
+	&lt;div class=<span class="token string">&quot;column&quot;</span>&gt;column 2&lt;/div&gt;
+	&lt;div class=<span class="token string">&quot;column&quot;</span>&gt;column 3&lt;/div&gt;
+	&lt;div class=<span class="token string">&quot;column&quot;</span>&gt;column 4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/person/images/css-layout/same-column.png" alt="image"></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/vuejs/vuepress/edit/master/docs/Css/css-layout.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/person/Css/scss.html" class="prev">
+        SCSS简易教程
+      </a></span> <span class="next"><a href="/person/Css/css-classname.html">
+        CSS命名规范
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/person/assets/js/app.69942934.js" defer></script><script src="/person/assets/js/2.996b1df4.js" defer></script><script src="/person/assets/js/11.e6c8d2c8.js" defer></script>
+  </body>
+</html>
