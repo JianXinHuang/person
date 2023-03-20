@@ -39,7 +39,7 @@
 
 首先看个现象: **垂直 margin 合并**
 
-```
+```css
 .first {
     width: 100px;
     height: 100px;
@@ -63,7 +63,7 @@
 首先我们根据第 5 条——“BFC 就是页面上的一个隔离的独立盒子，盒子里面的子元素不会影响到外面的元素。反之也如此。”
 那么我们只需要给其中一个 div 完成加个 div，并让外层的 div 变成 BFC 就可以了。
 
-```
+```css
 
 .first {
     width: 100px;
@@ -93,7 +93,7 @@
 
 第二个现象: **子元素浮动，导致父元素塌陷**
 
-```
+```css
 .div-parent {
     width: 200px;
     background-color: blue;
@@ -120,7 +120,7 @@
 
 这样只要我们将父元素设置为 BFC 即可，这样父元素的高度就不会塌陷了
 
-```
+```css
 .div-parent {
     width: 200px;
     background-color: blue;
@@ -147,7 +147,7 @@
 
 第三个现象: **文字环绕在浮动元素的周围**
 
-```
+```css
 div {
     width: 200px;
 }
@@ -171,7 +171,7 @@ main{
 根据 BFC 第 4 条——“BFC 的盒子不会与 float 盒子重叠。”
 所以我们只需要将 main 元素设置为 BFC 即可
 
-```
+```css
 div {
     width: 200px;
 }

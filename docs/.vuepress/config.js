@@ -15,7 +15,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: '随记博客', link: '/Css/css-flex' },
-      // { text: '思维导图', link: '/' }
+      { text: '思维导图', link: '/Xmind/map' }
     ],
     // 侧边栏
     sidebar: [
@@ -33,10 +33,16 @@ module.exports = {
       }, 
       {
         title: 'Javascript',   // 必要的
-        paath: '/post/',
         collapsable: false, // 可选的, 默认值是 true,
         children: [
           ['/Javascript/js-es6-async', 'ES6之async/await']
+        ]
+      },
+      {
+        title: 'Npm',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        children: [
+          ['/Npm/npm-verdaccio', 'window上搭建npm私仓']
         ]
       }
     ],

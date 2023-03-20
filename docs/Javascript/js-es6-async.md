@@ -11,26 +11,26 @@
 
 ##### 1、async的多种声明形式
 
-```
+```js
 //函数式声明
 async function test() {}
 ```
 
-```
+```js
 //对象式声明
 let obj = {
    async test() {}
 };
 ```
 
-```
+```js
 //箭头函数声明
 let test = async () => { }
 ```
 
 ##### 2、await语句的多种调用形式
 
-```
+```js
 //普通语句，首先await a;的表达式的值为a的值，然后再转成一个resolve的promise对象
 async function f() {
     await 123;   //值为123
@@ -38,7 +38,7 @@ async function f() {
     return a;
 }
 ```
-```
+```js
 //promise语句。(1)如果是resolve的。则直接返回resolve中的数据
 getPromise() {
   return new Promise((resolve, reject) => {
@@ -50,7 +50,7 @@ async getName() {
   return p;
 },
 ```
-```
+```js
 //promise语句。(2)如果是reject的。则直接返回reject中的数据
 getPromise() {
   return new Promise((resolve, reject) => {
@@ -67,7 +67,7 @@ async getName() {
 
 ##### 3、await语错误处理
 
-```
+```js
 //单条语句的处理
 async getName() {
   let str = "";
@@ -78,7 +78,7 @@ async getName() {
 }
 ```
 
-```
+```js
 //多条语句的处理
 async getName() {
   let str = "";
@@ -94,7 +94,7 @@ async getName() {
 
 ##### 4、await的并行处理
 
-```
+```js
 //因为多个await都是依次往后台发送。如果这几个请求之前没有先后关联顺序，则完全没必要。可以做成并行发送
 async getName() {
   let str = "";

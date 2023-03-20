@@ -20,7 +20,7 @@ modifier的类型例如  disabled, highlighted, checked, fixed, size big, color 
 
 之所以使用两个连字符和下划线而不是一个，是为了在给block或者element起名时，可以在中间加入-或者_,如:
 
-```
+```css
 .site-search{} /* 块 */  
 .site-search__field{} /* 元素 */  
 .site-search--full{} /* 修饰符 */    
@@ -32,7 +32,7 @@ BEM的关键是光凭名字就可以告诉其他开发者某个标记是用来�
 
 下面是个常规的class使用:
 
-```
+```html
 <form class="form">  
   <div class="register">
       <input type="text">  
@@ -41,7 +41,7 @@ BEM的关键是光凭名字就可以告诉其他开发者某个标记是用来�
 </form>   
 ```
 
-```
+```css
 .form{
     width:200px;
     padding:2px;
@@ -59,7 +59,7 @@ BEM的关键是光凭名字就可以告诉其他开发者某个标记是用来�
 ```
 如果改造成BEM，则变成下面:
 
-```
+```html
 <form class="form">  
   <div class="form__register">
       <input type="text">  
@@ -69,7 +69,7 @@ BEM的关键是光凭名字就可以告诉其他开发者某个标记是用来�
 ```
 对应的css
 
-```
+```css
 .form{
     width:200px;
     padding:2px;
@@ -93,7 +93,7 @@ BEM的关键是光凭名字就可以告诉其他开发者某个标记是用来�
 而人的手里拿着苹果apple，这个苹果不是人的一部分，放在任何位置都是个苹果。
 所以独立使用apple，而不用`person__apple`写法。
 
-```
+```css
 .person{}  
 .person__hand{}  
 .person--female{}  

@@ -1,7 +1,7 @@
 ## 一、居中布局
 #### 1、水平居中
 ###### a、inline-block + text-align
-```
+```css
 //css
 .parent{
 	text-align: center;
@@ -20,7 +20,7 @@ Tips：兼容至IE8.
 ![image](/person/images/css-layout/horizontal-center.png)
 
 ###### b、table + margin
-```
+```css
 //css
 .child{
 	display: table;
@@ -37,7 +37,7 @@ Tips：兼容至IE8.
 ![image](/person/images/css-layout/horizontal-center.png)
 
 ###### c、absolute + transform
-```
+```css
 //css
 .parent{
 	position: relative;
@@ -60,7 +60,7 @@ Tips：可兼容至IE9，因为transform限制。
 ![image](/person/images/css-layout/horizontal-center.png)
 
 ###### d、flex  +  justify-content
-```
+```css
 //css
 .parent{
 	display: flex;
@@ -78,7 +78,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 
 #### 2、垂直居中
 ###### a、tablet-cell + vertical-align
-```
+```css
 //css
 .child{
 	display: table-cell;
@@ -94,7 +94,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 ![image](/person/images/css-layout/vertical-middle.png)
 
 ###### b、absolute + transform
-```
+```css
 //css
 .parent{
 	position: relative;
@@ -117,7 +117,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 ![image](/person/images/css-layout/vertical-middle.png)
 
 ###### c、flex + align-items
-```
+```css
 //css
 .parent{
 	display: flex;
@@ -136,7 +136,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 
 #### 3、水平垂直居中
 ###### a、table-cell  + vertical-align + text-align
-```
+```css
 //css
 .parent{
 	width: 120px;
@@ -154,7 +154,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 ```
 
 ###### b、absolute + transform
-```
+```css
 //css
 .parent{
 	position: relative;
@@ -179,7 +179,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 ###### c、flex
 方案1
 
-```
+```css
 //css
 .parent{
 	display: flex;
@@ -198,7 +198,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 
 方案2 
 
-```
+```css
 .parent{
 	display: flex;
     height: 300px;
@@ -219,7 +219,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 ## 二、多列布局
 一列定宽，一列自适应
 
-```
+```css
 //css
 .container{
    display: flex;
@@ -245,7 +245,7 @@ Tips：可兼容至IE10，但flex提供的布局很强大。
 
 ## 三、等分布局
 
-```
+```css
 //css
 .parent {
 	display: flex;

@@ -31,7 +31,7 @@
 其中前4种最常用。
 
 #### 2.1、flex-direction属性
-```
+```css
 .box {
   flex-direction: row | row-reverse | column | column-reverse;
 }
@@ -57,7 +57,7 @@ column-reverse：主轴为垂直方向，起点在下沿。
 #### 2.2、flex-wrap属性
 默认情况下，项目都排在一条主轴线上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
 
-```
+```css
 .box{
   flex-wrap: nowrap | wrap | wrap-reverse;
 }
@@ -77,7 +77,7 @@ nowrap（默认值）：如果排列不下时，会按照子项目的实际宽�
 #### 2.3、justify-content属性
 定义了项目在主轴上的对齐方式。
 
-```
+```css
 .box {
   justify-content: flex-start | flex-end | center | space-between | space-around;
 }
@@ -90,7 +90,7 @@ space-around：每个项目两侧的间隔相等【不贴边】。
 #### 2.4、align-items属性
 定义项目在纵轴上如何对齐
 
-```
+```css
 .box {
   align-items: flex-start | flex-end | center | baseline | stretch;
 }
@@ -109,7 +109,7 @@ baseline: 项目的第一行文字的基线对齐【不会占满整个宽度，�
 - align-self  允许单个项目有与其他项目不一样的“纵轴”对齐方式，可覆盖align-items属性
 
 #### 3.1、flex属性
-```
+```css
 .item {
   flex: none | auto
   
@@ -125,7 +125,7 @@ none：不填充空白区域
 
 
 #### 3.2、align-self属性
-```
+```css
 .item {
   align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }

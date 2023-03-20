@@ -54,7 +54,7 @@
 - 2、浮动元素的容器(父元素)添加overflow:hidden;或overflow:auto(采用的理论是创建个块级上下文);
 - 3、浮动元素的容器(父元素)添加伪元素:after清除浮动（推荐）
 
-```
+```css
 .clearfix:after{
   content: ""; 
   display: block; 
@@ -81,7 +81,7 @@ body的宽度默认为视口宽度，即100vw，而body高度默认为0(可以�
 
 ### 4、css优先级
 
-```
+```css
     !important > style > id > class > tag
     
     例如:
@@ -106,7 +106,7 @@ inline-block的元素之间会受空白区域的影响，元素之间差不多�
 - 2、设置父元素的font-size属性为0，然后对子元素重新设定font-size (推荐)
 
 ### 6、pointer-events的使用
-```
+```css
 .disabled{
   pointer-events: none;
 }
@@ -139,7 +139,7 @@ inline-block的元素之间会受空白区域的影响，元素之间差不多�
 
 attr()
 
-```
+```css
 <span data-text="123456789"></span>
 span:before{
    content: attr(data-text);  //将span的data-text属性的值设置到content上
@@ -148,13 +148,13 @@ span:before{
 
 url()
 
-```
+```css
 background-image: url("logo.png");
 ```
 
 calc()
 
-```
+```css
 width: calc(100% - 29px); //减号前后，必须留一个空格
 width: calc(100vw - 29px);
 ```
